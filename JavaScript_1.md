@@ -180,3 +180,77 @@ In JavaScript, variables are containers that store data values. They allow you t
 
 - Use `let` and `const` in modern JavaScript code for better scoping and avoid issues caused by `var`.
 - `const` should be used when the value should not change, and `let` for variables that will change.
+
+## Data Type: 
+
+Data types in JavaScript referes to the types of the values that we are storing or working with. One of the most fundamental characteristics of a programming language is the set of data types it supports. These are the type of values that can be represented and manipulated in a programming language.
+
+JavaScript data types can be categorized as `primitive` and `non-primitive (object)`. JavaScript (ES6 and higher) allows you to work with seven primitive data types −
+
+- **Strings** of text e.g. "This text string" etc.
+  ```javascript
+  let name = "John Doe";      // Using double quotes
+  let greeting = 'Hello!';    // Using single quotes
+  let fullGreeting = `Hi, ${name}`; // Template literal with embedded variables
+  ```
+- **Numbers**, eg. 123, 120.50 etc.
+  ```javascript
+  let age = 25;        // Integer
+  let price = 19.99;   // Floating-point number
+  let largeNumber = 1e6; // Exponential notation (1 million)
+  ```
+- **Boolean** e.g. true or false.
+  ```javascript
+  let isStudent = true;
+  let hasGraduated = false;
+  ```
+- **null**: Null is a special type that represents the intentional absence of a value. It is often used to signify that a variable should have "no value."
+  ```javascript
+  let job = null; 
+  ```
+- **undefined**:  When a variable is declared but has not been assigned a value, its default value is undefined.
+  ```javascript
+  let salary; // Salary is declared but not assigned a value, so it's undefined
+  ```
+- **BigInt**: `BigInt` is used to represent numbers larger than the safe integer limit for Number (2^53 - 1). It is useful for dealing with very large numbers.
+  ```javascript
+  let bigNumber = 9007199254740991n; // Notice the "n" at the end
+  ```
+- Symbol
+
+### BigInt and Symbol are introduced in ES6. In ES5, there were only five primitive data types
+
+In addition to these primitive data types, JavaScript supports a composite data type known as object. We will cover objects in detail in a separate chapter.
+
+The Object data type contains the 3 sub-data types −
+
+- **Object**
+  ```javascript
+  let person = {
+    name: 'Alice',
+    age: 30,
+    greet: function() {
+      console.log('Hello!');
+    }
+  };
+  ```
+- **Array**
+  ```javascript
+    let colors = ['red', 'green', 'blue'];
+    let numbers = [1, 2, 3, 4, 5];
+  ```
+- **Date**
+  ```javascript
+    let currentDate = new Date();
+  ```
+- **Map and Set**
+  ```javascript
+    let map = new Map();
+    map.set('name', 'John');
+    
+    let set = new Set();
+    set.add(1);
+    set.add(2);
+    set.add(1); // Won't add because it's already in the set
+  ```
+
