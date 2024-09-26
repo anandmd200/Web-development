@@ -1,0 +1,61 @@
+<!-- Script in <head>...</head> section. -->
+
+<html>
+  <head>
+    <script type="text/javascript">
+      function sayHello() {
+        alert("Hello World");
+      }
+    </script>
+  </head>
+
+  <body>
+    <input type="button" onclick="sayHello()" value="Say Hello" />
+  </body>
+</html>
+
+<!-- Script in <body>...</body> section. -->
+
+<html>
+</head>
+<body>   
+   <script type = "text/javascript">
+      document.write("Hello World")
+   </script>  
+   <p>This is web page body </p>   
+</body>
+</html>
+
+<!-- Script in <body>...</body> and <head>...</head> sections. -->
+
+<html>
+<head>
+   <script type = "text/javascript">
+      function sayHello() {
+	     alert("Hello World")
+	  }
+   </script>
+</head>
+  
+<body>
+   <script type = "text/javascript">
+      document.write("Hello World")
+   </script>
+   <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+</body>
+</html>
+
+<!-- Script in an external file and then include in <head>...</head> section.  -->
+
+<html>
+<head>
+   <script type = "text/javascript" src = "filename.js" ></script>
+   <script src = "filename1.js" ></script>
+   <script src = "filename2.js" ></script>
+   <script src = "filename3.js" ></script>
+</head>
+<body>	
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"> </script>
+</body>
+</html>
