@@ -181,7 +181,7 @@ In JavaScript, variables are containers that store data values. They allow you t
 - Use `let` and `const` in modern JavaScript code for better scoping and avoid issues caused by `var`.
 - `const` should be used when the value should not change, and `let` for variables that will change.
 
-## Data Type: 
+## Data Type:
 
 Data types in JavaScript referes to the types of the values that we are storing or working with. One of the most fundamental characteristics of a programming language is the set of data types it supports. These are the type of values that can be represented and manipulated in a programming language.
 
@@ -189,14 +189,14 @@ JavaScript data types can be categorized as `primitive` and `non-primitive (obje
 
 - **Strings** of text e.g. "This text string" etc.
   ```javascript
-  let name = "John Doe";      // Using double quotes
-  let greeting = 'Hello!';    // Using single quotes
+  let name = "John Doe"; // Using double quotes
+  let greeting = "Hello!"; // Using single quotes
   let fullGreeting = `Hi, ${name}`; // Template literal with embedded variables
   ```
 - **Numbers**, eg. 123, 120.50 etc.
   ```javascript
-  let age = 25;        // Integer
-  let price = 19.99;   // Floating-point number
+  let age = 25; // Integer
+  let price = 19.99; // Floating-point number
   let largeNumber = 1e6; // Exponential notation (1 million)
   ```
 - **Boolean** e.g. true or false.
@@ -206,9 +206,9 @@ JavaScript data types can be categorized as `primitive` and `non-primitive (obje
   ```
 - **null**: Null is a special type that represents the intentional absence of a value. It is often used to signify that a variable should have "no value."
   ```javascript
-  let job = null; 
+  let job = null;
   ```
-- **undefined**:  When a variable is declared but has not been assigned a value, its default value is undefined.
+- **undefined**: When a variable is declared but has not been assigned a value, its default value is undefined.
   ```javascript
   let salary; // Salary is declared but not assigned a value, so it's undefined
   ```
@@ -227,30 +227,134 @@ The Object data type contains the 3 sub-data types −
 - **Object**
   ```javascript
   let person = {
-    name: 'Alice',
+    name: "Alice",
     age: 30,
-    greet: function() {
-      console.log('Hello!');
-    }
+    greet: function () {
+      console.log("Hello!");
+    },
   };
   ```
 - **Array**
   ```javascript
-    let colors = ['red', 'green', 'blue'];
-    let numbers = [1, 2, 3, 4, 5];
+  let colors = ["red", "green", "blue"];
+  let numbers = [1, 2, 3, 4, 5];
   ```
 - **Date**
   ```javascript
-    let currentDate = new Date();
+  let currentDate = new Date();
   ```
 - **Map and Set**
+
   ```javascript
-    let map = new Map();
-    map.set('name', 'John');
-    
-    let set = new Set();
-    set.add(1);
-    set.add(2);
-    set.add(1); // Won't add because it's already in the set
+  let map = new Map();
+  map.set("name", "John");
+
+  let set = new Set();
+  set.add(1);
+  set.add(2);
+  set.add(1); // Won't add because it's already in the set
   ```
 
+## Javascript Type conversion:
+
+- **Implicit type conversion**
+
+```javascript
+let result = "5" + 3; // '53' (string concatenation)
+
+let isTrue = true + 1; // 2 (true is coerced to 1)
+
+console.log(null + 1); // 1 (null is coerced to 0)
+console.log(undefined + 1); // NaN (undefined is not a number)
+```
+
+- **Explicit Type Conversion**
+
+```javascript
+let num1 = 10;
+let str = String(num1); // "10"
+
+let strNum2 = "20";
+let num2 = Number(strNum2); // 20
+
+let truthy = Boolean(1); // true
+let falsy = Boolean(0); // false
+
+let intNum = parseInt("123.45"); // 123
+let floatNum = parseFloat("123.45"); // 123.45
+```
+
+## Inline JavaScript Example:
+
+```html
+<div>
+  <a href="" onclick="alert('Hello!! are you there!!')">Click Me</a>
+</div>
+```
+
+## c++ block & scope
+
+```c++
+#include <iostream>
+using namespace std;
+
+int max = 9999999;
+
+int main() {
+    {
+        int a = 20;
+        {
+            {
+                cout<<b<<endl;
+                {
+                    cout<<a<<endl;
+                    int b = 90;
+                }
+            }
+        }
+    }
+
+  return 0;
+}
+```
+
+Operators:
+
+```javascript
+//Oerators : Arithmatic
+
+let a = (((12 + 13 - 1) * 2) / 2) % 5;
+
+a = ++a;
+
+console.log(a);
+
+//relational
+
+// <, >, <= , >= , ==, != , ===, !==,
+
+let num1 = 10;
+let num2 = 10;
+let num3 = 10;
+
+if (num1 > num2 && num1 > num3) {
+  console.log(`Num1 is grater : ${num1}`);
+} else if (num2 > num1 && num2 > num3) {
+  console.log(`Num2 is grater : ${num2}`);
+} else if (num3 > num1 && num3 > num2) {
+  console.log(`Num3 is grater : ${num3}`);
+} else {
+  console.log("All numbre are equal.");
+}
+
+let ans =
+  num1 > num2 && num1 > num3
+    ? "num1 is grater"
+    : num2 > num1 && num2 > num3
+    ? "number 2 is grater "
+    : num3 > num1 && num3 > num2
+    ? "num3 is grater"
+    : "All number are equal";
+
+console.log(ans);
+```
