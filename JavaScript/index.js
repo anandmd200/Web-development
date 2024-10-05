@@ -34,3 +34,13 @@ let ans =
     : "All number are equal";
 
 console.log(ans);
+
+function handleeventListener() {
+  let count = 0;
+  document.getElementById("btn").addEventListener("click", function xyx() {
+    count++;
+    console.log("clicked: ", count);
+  });
+}
+
+handleeventListener();

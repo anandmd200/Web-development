@@ -3,10 +3,13 @@
     <title>Java script</title>
   </head>
   <body>
-    <div>
-      <a href="" onclick="alert('Hello!! are you there!!')">Click Me</a>
-    </div>
-
-    <script src="/JavaScript/index.js"></script>
+    <button id="btn">click me</button>
+    <script>
+      let count = 0;
+      document.getElementById("btn").addEventListener("click", function xyx() {
+        count++;
+        console.log("clicked: ", count);
+      });
+    </script>
   </body>
 </html>

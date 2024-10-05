@@ -217,3 +217,59 @@ function init() {
 }
 init();
 ```
+
+## Call back functions
+
+JavaScript is designed to handle asynchronous programming which allows us to perform multiple tasks at once without blocking the main execution thread.
+
+A callback is a function that is passed as an argument to another function and is executed after the completion of that main function. In simple terms, a callback function is called at the end of a task to either deliver results or perform an action.
+
+```js
+function greet(name) {
+  console.log("Hello, " + name);
+}
+
+function processUserInput(callback) {
+  const name = "John";
+  callback(name); // Executing the callback
+}
+
+processUserInput(greet);
+
+//example 2:
+
+function mainFunction(callback) {
+  console.log("Performing operation...");
+  // Use setTimeout to simulate an asynchronous operation
+  setTimeout(function () {
+    callback("Operation complete");
+  }, 1000);
+}
+
+// Define the callback function
+function callbackFunction(result) {
+  console.log("Result: " + result);
+}
+
+// Call the main function with the callback function
+mainFunction(callbackFunction);
+```
+
+```html
+<!-- callback EventListener -->
+<html>
+  <head>
+    <title>Java script</title>
+  </head>
+  <body>
+    <button id="btn">click me</button>
+    <script>
+      let count = 0;
+      document.getElementById("btn").addEventListener("click", function xyx() {
+        count++;
+        console.log("clicked: ", count);
+      });
+    </script>
+  </body>
+</html>
+```
