@@ -1,46 +1,123 @@
-//Oerators : Arithmatic
+// let ans = ((a = 8), a++, (a += 2));
+// console.log(ans);
 
-let a = (((12 + 13 - 1) * 2) / 2) % 5;
+// let [a, b, c] = [34, 72, 12];
 
-a = ++a;
+// console.log(a, b, c);
 
-console.log(a);
+// const obj = {
+//   product: "Mobile",
+//   price: 20000,
+//   color: "Blue",
+// };
 
-//relational
+// console.log(obj);
 
-// <, >, <= , >= , ==, != , ===, !==,
+// delete obj.price;
 
-let num1 = 10;
-let num2 = 10;
-let num3 = 10;
+// console.log(obj);
 
-if (num1 > num2 && num1 > num3) {
-  console.log(`Num1 is grater : ${num1}`);
-} else if (num2 > num1 && num2 > num3) {
-  console.log(`Num2 is grater : ${num2}`);
-} else if (num3 > num1 && num3 > num2) {
-  console.log(`Num3 is grater : ${num3}`);
-} else {
-  console.log("All numbre are equal.");
+// function* test() {
+//   yield 20;
+//   yield [1, 2, 3];
+//   yield "Hello World";
+// }
+// let res = test();
+
+// console.log(res.next());
+// console.log(res.next());
+// console.log(res.next());
+// console.log(res.next());
+
+// const nums1 = [10, 20, 30];
+// const nums2 = [40, 50, 60];
+
+// const res1 = [nums1, nums2];
+// console.log(res1);
+
+// const res = [...nums1, ...nums2];
+
+// console.log(res);
+
+// const car = {
+//   gears: 6,
+//   color: "Black",
+// };
+
+// const BMW = {
+//   model: "X5",
+//   year: 2019,
+//   ...car,
+// };
+
+// console.log(BMW);
+
+// let j = 1;
+// do {
+//   // try to avoide printing 6;
+//   j++;
+//   if (j == 6) {
+//     continue;
+//   }
+//   console.log("Do-while iteration number: " + j);
+// } while (j < 11);
+
+// let arr = [{ fruit: "apple" }, { fruit: "banana" }, { fruit: "cherry" }];
+
+// for (let ele of arr) {
+//   console.log(ele.fruit);
+// }
+
+// let obj = {
+//   brand: "OD",
+//   model: "Q7",
+//   color: "Black",
+// };
+
+// for (key1 in obj) {
+//   console.log(key1 + ": " + obj[key1]);
+// }
+
+// count frequency of consonents in given string
+
+let mystring = "MY nAmE is alok";
+mystring = mystring.toLowerCase();
+let count1 = 0;
+let count2 = 0;
+for (let i = 0; i < mystring.length; i++) {
+  switch (mystring[i]) {
+    case "a":
+      break;
+    case "e":
+      break;
+    case "i":
+      break;
+    case "o":
+      break;
+    case "u":
+      break;
+    case " ":
+      break;
+    default:
+      count1++;
+      break;
+  }
 }
 
-let ans =
-  num1 > num2 && num1 > num3
-    ? "num1 is grater"
-    : num2 > num1 && num2 > num3
-    ? "number 2 is grater "
-    : num3 > num1 && num3 > num2
-    ? "num3 is grater"
-    : "All number are equal";
-
-console.log(ans);
-
-function handleeventListener() {
-  let count = 0;
-  document.getElementById("btn").addEventListener("click", function xyx() {
-    count++;
-    console.log("clicked: ", count);
-  });
+for (let i = 0; i < mystring.length; i++) {
+  if (
+    mystring[i] == "a" ||
+    mystring[i] == "e" ||
+    mystring[i] == "i" ||
+    mystring[i] == "o" ||
+    mystring[i] == "u" ||
+    mystring[i] == " "
+  ) {
+  } else {
+    count2++;
+  }
 }
 
-handleeventListener();
+console.log(mystring);
+console.log("Using switch case: ", count1);
+console.log("Using control statement: ", count2);

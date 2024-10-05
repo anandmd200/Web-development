@@ -182,51 +182,47 @@ for (key in obj) {
 
 In JavaScript, break and continue are used to control the flow of loops;
 
-```javascript 
-//break 
+```javascript
+//break
 
 for (let i = 0; i < 10; i++) {
   if (i === 5) {
-    break;  // Exit the loop when i is 5
+    break; // Exit the loop when i is 5
   }
   console.log(i);
 }
-
 
 //continue
 
 for (let i = 0; i < 10; i++) {
   if (i === 5) {
-    continue;  // Skip the current iteration when i is 5
+    continue; // Skip the current iteration when i is 5
   }
   console.log(i);
 }
-
 
 // combined example
 
 for (let i = 0; i < 10; i++) {
   if (i === 3) {
-    continue;  // Skip iteration when i is 3
+    continue; // Skip iteration when i is 3
   }
   if (i === 7) {
-    break;  // Exit the loop when i is 7
+    break; // Exit the loop when i is 7
   }
   console.log(i);
 }
 ```
-
 
 ## Switch case
 
 The switch statement in JavaScript is used to perform different actions based on different conditions. It is an alternative to multiple if...else if statements when you need to compare a value to several potential options.
 
 ```javascript
+let today = new Date(); // Get the current date
+let dayOfWeek = today.getDay(); // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
 
-let today = new Date();  // Get the current date
-let dayOfWeek = today.getDay();  // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
-
-switch(dayOfWeek) {
+switch (dayOfWeek) {
   case 0:
     console.log("Today is Sunday");
     break;
@@ -252,13 +248,12 @@ switch(dayOfWeek) {
     console.log("Invalid day");
 }
 
-
 // what if won't use break statement
 
 let today = new Date();
 let dayOfWeek = today.getDay();
 
-switch(dayOfWeek) {
+switch (dayOfWeek) {
   case 0:
     console.log("Today is Sunday");
   case 1:
@@ -287,29 +282,75 @@ Today is Friday
 Today is Saturday
 
 */
-
 ```
+
 ## count the vowels in a given string
 
 ```javascript
-  let str = "Hello world"; 
-  let count = 0;
-  let lowerStr = str.toLowerCase(); // Convert the string to lowercase to handle both uppercase and lowercase vowels
+let str = "Hello world";
+let count = 0;
+let lowerStr = str.toLowerCase(); // Convert the string to lowercase to handle both uppercase and lowercase vowels
 
-  for (let i = 0; i < lowerStr.length; i++) {
-    let char = lowerStr[i];
-    
-    // Switch to check for vowels
-    switch(char) {
-      case 'a':
-      case 'e':
-      case 'i':
-      case 'o':
-      case 'u':
-        count++;
-        break;
-    }
+for (let i = 0; i < lowerStr.length; i++) {
+  let char = lowerStr[i];
+
+  // Switch to check for vowels
+  switch (char) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+      count++;
+      break;
   }
+}
 
 console.log("Number of vowels:", count);
+```
+
+## count frequency of consonant:
+
+```js
+let mystring = "MY nAmE is alok";
+mystring = mystring.toLowerCase();
+let count1 = 0;
+let count2 = 0;
+for (let i = 0; i < mystring.length; i++) {
+  switch (mystring[i]) {
+    case "a":
+      break;
+    case "e":
+      break;
+    case "i":
+      break;
+    case "o":
+      break;
+    case "u":
+      break;
+    case " ":
+      break;
+    default:
+      count1++;
+      break;
+  }
+}
+
+for (let i = 0; i < mystring.length; i++) {
+  if (
+    mystring[i] == "a" ||
+    mystring[i] == "e" ||
+    mystring[i] == "i" ||
+    mystring[i] == "o" ||
+    mystring[i] == "u" ||
+    mystring[i] == " "
+  ) {
+  } else {
+    count2++;
+  }
+}
+
+console.log(mystring);
+console.log("Using switch case: ", count1);
+console.log("Using control statement: ", count2);
 ```
