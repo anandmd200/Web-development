@@ -3,7 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>classList Example</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid gray;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .green {
+        background-color: lightGreen;
+      }
+
+      .blue {
+        background-color: lightblue;
+      }
+
+      .red {
+        background-color: lightcoral;
+      }
+
+      .yellow {
+        background-color: lightyellow;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="box" data-color="red">1</div>
+      <div class="box" data-color="blue">2</div>
+      <div class="box" data-color="green">3</div>
+      <div class="box" data-color="yellow">4</div>
+    </div>
+
+    <script src="/JavaScript/index.js"></script>
+  </body>
 </html>
