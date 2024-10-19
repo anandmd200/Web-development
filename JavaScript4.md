@@ -42,38 +42,33 @@ node.nodeType
 
 ## Selecting elements:
 
-- getElementById() – select an element by id.
+- `getElementById()` – select an element by id.
   Selects an element by its id attribute. Only one element can have a specific id, so this method returns a single element.
+
   ```js
   <!-- HTML -->
   <p id="intro">Hello World</p>
+
+  const element = document.getElementById("intro");
+  console.log(element.textContent); // Output: Hello World
   ```
 
-<!-- JavaScript -->
+- `getElementsByName()` – select elements by name.
+  Selects elements by their name attribute. Returns a NodeList (a collection of elements).
 
-const element = document.getElementById("intro");
-console.log(element.textContent); // Output: Hello World
-
-````
-
-- getElementsByName() – select elements by name.
-Selects elements by their name attribute. Returns a NodeList (a collection of elements).
-
-```html
+```js
 <!-- HTML -->
 <input type="text" name="username">
 <input type="text" name="username">
 
-<!-- JavaScript -->
 const elements = document.getElementsByName("username");
 console.log(elements.length); // Output: 2
+```
 
-````
-
-- getElementsByTagName() – select elements by a tag name.
+- `getElementsByTagName()` – select elements by a tag name.
   Selects elements by their tag name. Returns a NodeList of all elements with the specified tag.
 
-```html
+```js
 <!-- HTML -->
 <h1>Title 1</h1>
 <h1>Title 2</h1>
@@ -83,10 +78,10 @@ const headings = document.getElementsByTagName("h1");
 console.log(headings.length); // Output: 2
 ```
 
-- getElementsByClassName() – select elements by one or more class
+- `getElementsByClassName()` – select elements by one or more class
   Selects all elements that have one or more specific class names. Returns a NodeList of matching elements.
 
-```html
+```js
 <!-- HTML -->
 <div class="box red"></div>
 <div class="box red"></div>
@@ -96,11 +91,11 @@ const redBoxes = document.getElementsByClassName("red");
 console.log(redBoxes.length); // Output: 2
 ```
 
-- querySelector() & querySelectorAll() – select elements by CSS selectors.
+- `querySelector() & querySelectorAll()` – select elements by CSS selectors.
   `querySelector()`: Selects the first element that matches a specified CSS selector.
   `querySelectorAll()`: Selects all elements that match a specified CSS selector. Returns a NodeList.
 
-```html
+```js
 <!-- HTML -->
 <p class="para">Paragraph 1</p>
 <p class="para">Paragraph 2</p>
@@ -111,3 +106,8 @@ console.log(firstPara.textContent); // Output: Paragraph 1 const allParas =
 document.querySelectorAll(".para"); // All matching elements
 console.log(allParas.length); // Output: 2
 ```
+
+## Note
+
+`NodeList`: A collection of nodes (elements) that is returned by methods like `getElementsByTagName()`, `getElementsByClassName()`, etc. You can iterate over it, similar to arrays, but it's not a true array.
+`querySelector()` vs. `getElementById()`: `querySelector()` is more flexible as it can use any CSS selector, while `getElementById()` is faster for direct id selection.
