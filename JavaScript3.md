@@ -74,7 +74,7 @@ console.log(factorial(3)); // 6
 
 ## what is difference b/w function Declaration (or function statement) vs function expression
 
-### Function hoisting: Function hoisting only works with function declarations — not with function expressions.
+`Function hoisting: Function hoisting only works with function declarations — not with function expressions`.
 
 ```js
 /* function declaration
